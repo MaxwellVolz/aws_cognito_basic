@@ -30,26 +30,45 @@ $.getScript("keys.js", function() {
 
 
 function testFunc() {
-    var attribute = {
-        Name: 'phone_number',
-        Value: '+7146004445'
-    };
+    // Initialize the Amazon Cognito credentials provider
 
-    var attribute = new AWS.CognitoIdentityServiceProvider.CognitoUserAttribute(attribute);
-    var attributeList = [];
+    // testing getting database files
 
-    attributeList.push(attribute);
-    var cognitoUser;
+    // check this url:
+    // http://docs.aws.amazon.com/cognito/latest/developerguide/step2-getting-started.html
+    // https://github.com/aws/amazon-cognito-js/
 
-    userPool.signUp('m', 'TestPass1', attributeList, null, function(err, result) {
+
+    
+  
+    AWS.config.credentials.get(function(err) {
         if (err) {
-            alert(err);
+            console.log("Error: "+err);
             return;
         }
-        cognitoUser = result.user;
-    });
+        console.log("Cognito Identity Id: " + AWS.config.credentials.identityId);
+        var cognitoSyncClient = new AWS.CognitoSync();
+        cognitoSyncClient.listDatasets({
+                IdentityId: AWS.config.credentials.identityId,
+                IdentityPoolId: Identity_Pool_Id
+            }, function(err, data) {
+                if ( !err ) {
+                    console.log(JSON.stringify(data));
+                }
+            })
+        });
 
-}
+
+        //you can now check that you can describe the DynamoDB table
+        var params = {TableName: "ChatLogId" };
+        var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+
+        dynamodb.describeTable(params, function(err, data){
+                console.log("err", err);
+            console.log(JSON.stringify(data));
+        })
+
+    }
 
 
 
@@ -93,7 +112,7 @@ function validateUserX() {
 
                 var newDOM = "<br/>" +
                         "<h1 style=\"height:" + $("#validate_user_section").height() + "px\">" +
-                        "Wow! " + result.user.username +
+                        "Wow! " + username +
                         ", you are awesome.</h1>";
                     $("#validate_user_section").html(newDOM);
             },
