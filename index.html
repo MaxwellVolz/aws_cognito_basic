@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <link href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+    rel="stylesheet"><!-- Optional theme -->
+    <link href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"
+    rel="stylesheet">
+    <script src="/libs/jsbn.js">
+    </script>
+    <script src="/libs/jsbn2.js">
+    </script>
+    <script src="/libs/sjcl.js">
+    </script>
+    <script src="/libs/moment.min.js">
+    </script>
+    <script src="/libs/aws-cognito-sdk.min.js">
+    </script>
+    <script src="/libs/amazon-cognito-identity.min.js">
+    </script>
+    <script src="/libs/aws-sdk.js">
+    </script><!-- favicon stuff -->
+    <!-- <link rel="icon" 
+    type="image/png" 
+    href="brewImages/favicon32x.png"> -->
+</head><!-- NAVBAR
+    ================================================== -->
+<body>
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button aria-controls="navbar" aria-expanded="false"
+                        class="navbar-toggle collapsed" data-target="#navbar"
+                        data-toggle="collapse" type="button"><span class=
+                        "sr-only">Toggle navigation</span> <span class=
+                        "icon-bar"></span> <span class="icon-bar"></span>
+                        <span class="icon-bar"></span></button> <a class=
+                        "navbar-brand" href="#">BasicBoots.com</a>
+                    </div>
+                    <div class="navbar-collapse collapse" id="navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="#home">Home</a>
+                            </li><!-- <li><a href="#blog">Blog</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row featurette">
+            <div class="col-md-12">
+                <!--                <h1 id="test_text">Create an Account</h1> -->
+                <section>
+                    <button onclick="testFunc()" type="button">Test</button>
+                </section>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-12">
+                <section id="create_account_section">
+                    <h1 id="create_account_text">Create an Account</h1>
+                    <p>Password must contain a lowercase, capital, and
+                    number.</p>
+                    <form id="createUser" name="createUser">
+                        <input id="name" name="name" placeholder="Username"
+                        required="" type="text"> <input autocomplete="off" id=
+                        "password" name="password" placeholder="Password"
+                        required="" type="text"> 
+                        <button onclick="createUserX()" type="button">Create Account</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <!-- <button type="button" onclick="testAuthClick()">testAuthClick</button> -->
+        <div class="row featurette">
+            <div class="col-md-12">
+                <form id="validateUser" name="validateUser">
+                    <h1 id="login_text">Login</h1><input id="name" name="name"
+                    placeholder="Username" required="" type="text">
+                    <input autocomplete="off" id="password" name="password"
+                    placeholder="Password" value="TestPass1" required="" type="text">
+                    <button onclick="validateUserX()" type=
+                    "button">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <!-- <button type="button" onclick="testAuthClick()">testAuthClick</button> -->
+        
+    </div><!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <!-- <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
+    </footer><!-- /.container -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script> 
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script> -->
+     <!-- Latest compiled and minified JavaScript -->
+     
+    <script src=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js">
+    </script> 
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script> -->
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js">
+    </script> <!-- <script src="styleJS.js"></script> -->
+</body>
+</html>
