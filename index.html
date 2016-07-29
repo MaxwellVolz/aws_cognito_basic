@@ -4,23 +4,25 @@
     <meta charset="utf-8">
     <title>Template</title>
     <link href=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+    "libs/bootstrap.min.css"
     rel="stylesheet"><!-- Optional theme -->
     <link href=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"
+    "libs/bootstrap-theme.min.css"
     rel="stylesheet">
-    <script src="libs/jsbn.js"></script>
-    <script src="libs/jsbn2.js"></script>
-    <script src="libs/sjcl.js">
-    </script>
-    <script src="libs/moment.min.js">
-    </script>
-    <script src="libs/aws-cognito-sdk.min.js">
-    </script>
-    <script src="libs/amazon-cognito-identity.min.js">
-    </script>
-    <script src="libs/aws-sdk.js">
-    </script><!-- favicon stuff -->
+    <script src="libs/require.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+     
+    <!-- <script src="libs/aws-sdk.js"></script> -->
+<!--  -->
+<!--     <script src="libs/jsbn.js"></script> -->
+<!--     <script src="libs/jsbn2.js"></script> -->
+<!--     <script src="libs/sjcl.js"></script> -->
+    <!-- <script src="libs/moment.min.js"></script> -->
+    <!-- <script src="libs/moment.js"></script> -->
+<!--     <script src="libs/aws-cognito-sdk.min.js"></script> -->
+<!--     <script src="libs/amazon-cognito-identity.min.js"></script> -->
+    <!-- favicon stuff -->
     <!-- <link rel="icon" 
     type="image/png" 
     href="brewImages/favicon32x.png"> -->
@@ -56,7 +58,7 @@
             <div class="col-md-12">
                 <!--                <h1 id="test_text">Create an Account</h1> -->
                 <section>
-                    <button onclick="testFunc()" type="button">Test</button>
+                    <button id="testFuncButton" type="button">Test</button>
                 </section>
             </div>
         </div>
@@ -93,7 +95,7 @@
                             placeholder="Username" required="" type="text">
                             <input autocomplete="off" id="password" name="password"
                             placeholder="Password" value="TestPass1" required="" type="text">
-                            <button onclick="validateUserX()" type=
+                            <button  id="loginButton" type=
                             "button">Login</button>
                         </form>
                     </section>
@@ -115,12 +117,9 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script> -->
     <!-- Latest compiled and minified JavaScript -->
 
-    <script src=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js">
-</script> 
+    
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script> -->
-<link href="style.css" rel="stylesheet">
-<script src="script.js">
+
 </script> <!-- <script src="styleJS.js"></script> -->
 </body>
 </html>
